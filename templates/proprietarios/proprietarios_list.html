@@ -1,0 +1,39 @@
+{% extends 'base.html' %} <!--para estender o html pai para outros htmls atraves do Django-->
+
+{% load crispy_forms_tags %}
+
+{% block title %} Lista de Proprietarios {% endblock %}
+
+{% block main %}
+
+{% include 'mensagens.html' %}
+
+<center><h2>Lista de Proprietarios</h2></center><br>
+
+<center><table class="table-bordered my_table" id="alter">
+    <thead class="mythead">
+        <tr>
+            <th>Proprietário</th>
+            <th>Possivel Venda</th>
+            <!--<th>Editar</th>-->
+        </tr>
+    </thead>
+    <tbody class="mytbody">
+        <tr>
+            {% for dono in object_list %}
+                <td>{{ dono.nome }}</td>
+                {% if dono.possivel_venda == True %}
+                <td><img src="/static/confirm.png" width="40px" height="40px"></td>
+                {% else %}
+                <td><img src="/static/signal.png" width="30px" height="30px"></td>
+                {% endif %}
+            <!--<td><a href="{% url 'editar_proprietario' dono.pk %}" title="Editar" class="btn btn-warning btn-sm mybtn">
+                <i class="fa fa-edit icon-eye" aria-hidden="true"></i></a></td>-->
+        </tr>{% endfor %}
+    </tbody>
+</table></center>
+<br>
+<center><a href="{% url 'novo_proprietario' %}" class="btn btn-primary mx-3">Cadastrar Proprietário</a>
+    <a href="{% url 'lista' %}" class="btn btn-success mx-3">Lista de Carros</a></center>
+
+{% endblock %}

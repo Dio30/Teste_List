@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,300&display=swap');
+
+@media (min-width: 768px){ /* para deixar o site responsivo */
+    body{max-width: 100%;};
+}
+
+body{ /* o corpo do site */
+    position: relative;
+    min-height: 100vh;
+    background-color: #36eeb0;
+}
+
+.table-bordered{ /* para botar borda no head do login */
+    color: #000000;
+    background-color: #ffffff;
+}
+
+.mydiv{ /* para a cor do modal */
+    background-color: #939393;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.mymodalbutton{ /* para deixar o botão do modal para a esquerda */
+    margin-left: 15px;
+    position:absolute;
+    left: 1px;
+  }
+
+.mymodalbutton2{ /* para deixar o botão do modal para a direita */
+    position:absolute;
+    right: 18px;
+}
+
+.mythead{ /* tabela head */
+    background-color:#1f907d;
+    color:#000000;
+    text-align: center;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    line-height: 2rem;
+}
+
+.mytbody{ /* tabela body */
+    background-color: #a2a2a2;
+    text-align: center;
+    font-size: 90%;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+}
+
+.my_table{ /* para estilizar a tabela */
+    line-height: 2.5rem;
+    border-radius: 25px;
+    -moz-border-radius: 25px;
+    width: 100%; /* para deixar a tabela responsiva */
+    min-width: 300px; /* para deixar a tabela responsiva */
+    max-width: 960px; /* para deixar a tabela responsiva */
+    overflow-x: hidden; /* para ocultar as bordas no eixo x */
+    overflow-y: hidden; /* para ocultar as bordas no eixo y */
+    background-color: #094c66;
+    border: 0.5rem;
+    border-style: double;
+    border-collapse: separate;
+    box-shadow: #03fee17d 7px 7px 7px;
+}
+
+.icon-eye{ /* icones na pagina pricipal */
+    color: #000000;
+}
+
+.mybtn{ /* botões */
+    color: #ffffff;
+    box-shadow: #03fee17d 4px 3px 5px;
+    border-radius: 10px;
+    border-top: 1px;
+    border-bottom: 1px;
+    transition: transform 200ms, box-shadow 200ms;
+}
+
+.mybtn:active{ /* botões */
+    transform:translateY(5px) translateX(5px);
+    box-shadow: #094c66 5px 5px 5px;
+}
+
+.mycardheader{ /* para deixar os itens no card-header na cor definida */
+    background-color: #ababab;
+}
+
+.mybody{ /* para deixar os itens no card-body na cor definida */
+    background-color: #868686;
+    color: #000000;
+    font-weight: bold;
+    line-height: 1.5rem;
+}
