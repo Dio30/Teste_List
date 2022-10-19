@@ -14,12 +14,12 @@ model = (
 
 class Proprietarios(models.Model):
     nome = models.CharField(max_length=200, unique=True)
-    possivel_venda = models.BooleanField(default=False)
+    possivel_venda = models.BooleanField(default=True)
     
     class Meta:
         verbose_name = 'Proprietario'
         verbose_name_plural = 'Proprietarios'
-        ordering = ['nome',]
+        ordering = ['id',]
     
     def __str__(self):
         return self.nome
@@ -37,4 +37,4 @@ class Carros(models.Model):
         ordering = ['nome_do_carro',]
         
     def __str__(self):
-        return f"O carro {self.nome_do_carro} pertence ao proprietário {self.proprietarios}"
+        return self.nome_do_carro

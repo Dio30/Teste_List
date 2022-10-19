@@ -14,8 +14,8 @@
     <thead class="mythead">
         <tr>
             <th>Proprietário</th>
-            <th>Possivel Venda</th>
-            <!--<th>Editar</th>-->
+            <th>Oportunidade de Venda</th>
+            <th>Tem carro?</th>
         </tr>
     </thead>
     <tbody class="mytbody">
@@ -27,13 +27,29 @@
                 {% else %}
                 <td><img src="/static/signal.png" width="30px" height="30px"></td>
                 {% endif %}
-            <!--<td><a href="{% url 'editar_proprietario' dono.pk %}" title="Editar" class="btn btn-warning btn-sm mybtn">
-                <i class="fa fa-edit icon-eye" aria-hidden="true"></i></a></td>-->
+
+                {% if dono.nome == 'admin' %}
+                <td>Sim</td>
+                {% else %}
+                <td>Não</td>
+                {% endif %}
         </tr>{% endfor %}
     </tbody>
 </table></center>
 <br>
 <center><a href="{% url 'novo_proprietario' %}" class="btn btn-primary mx-3">Cadastrar Proprietário</a>
     <a href="{% url 'lista' %}" class="btn btn-success mx-3">Lista de Carros</a></center>
-
+<br>
+<center><table class="table-bordered table-sm">
+    <thead class="mythead">
+        <tr>
+            <th>Total de Proprietarios</th>
+        </tr>
+    </thead>
+    <tbody class="mytbody">
+        <tr>
+            <td>{{ proprietarios }}</td>
+        </tr>
+    </tbody>
+</table></center>
 {% endblock %}

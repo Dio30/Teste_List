@@ -2,7 +2,7 @@
 
 {% load crispy_forms_tags %}
 
-{% block title %} Lista {% endblock %}
+{% block title %} Lista de carros {% endblock %}
 
 {% block main %}
 
@@ -17,46 +17,16 @@
             <th>Carro</th>
             <th>Cor</th>
             <th>Modelo</th>
-            <!--<th>Editar</th>
-            <th>Deletar</th> -->
         </tr>
     </thead>
     <tbody class="mytbody">
         <tr>
-            {% for carro in object_list %}
+            {% for carro in carros_list %}
             <td>{{ carro.proprietarios }}</td>
             <td>{{ carro.nome_do_carro }}</td>
             <td>{{ carro.cor }}</td>
             <td>{{ carro.modelos }}</td>
-            <!--<td><a href="{% url 'editar_carro' carro.pk %}" title="Editar" class="btn btn-warning btn-sm mybtn">
-                <i class="fa fa-edit icon-eye" aria-hidden="true"></i></a></td>
-            <td><a href="{% url 'deletar_carro' carro.pk %}" title="Deletar" class="btn btn-danger btn-sm mybtn"
-                data-toggle="modal" data-target="#exampleModal{{ carro.pk }}">
-                <i class="fa fa-trash-o icon-eye" aria-hidden="true"></i></a>
 
-                    
-                <div class="modal fade" id="exampleModal{{ carro.pk }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header mydiv">
-                                <h5 class="modal-title" id="exampleModalLabel">Tem certeza que deseja deletar o carro {{ carro.nome_do_carro }}?</h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span title="Fechar" aria-hidden="true">&times;</span></button>
-                            </div>
-                            <div class="modal-body mydiv">
-                                <form method="post" action="{% url 'deletar_carro' carro.pk %}">
-                                    {% csrf_token %}
-                                    <button type="submit" title="Deletar" 
-                                    class="btn btn-danger btn-sm mybtn mx-2">Deletar</button>
-
-                                    <button type="button" title="Voltar" 
-                                    class="btn btn-primary btn-sm mybtn mx-2" data-dismiss="modal">Voltar</button>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </td>-->
         </tr>{% endfor %}
     </tbody>
 </table></center>
@@ -94,5 +64,18 @@
 
     {% endif %}
 </ul>
+<br>
+<center><table class="table-bordered table-sm">
+    <thead class="mythead">
+        <tr>
+            <th>Total de Carros</th>
+        </tr>
+    </thead>
+    <tbody class="mytbody">
+        <tr>
+            <td>{{ carros }}</td>
+        </tr>
+    </tbody>
+</table></center>
 
 {% endblock %}
