@@ -8,11 +8,13 @@
 
 {% include 'mensagens.html' %}
 
-<div class="form-content my-3">
+{% include 'navbar.html' %}
+
+<div class="form-content">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-6">
-                <div class="card shadow-lg border-1 rounded-lg mt-3 mb-2">
+                <div class="card shadow-lg border-1 rounded-lg mt-5">
                     <div class="card-header justify-content-center mycardheader">
                         <h2 class="font-weight-dark my-8 text-center">Cadastro de Carros</h2>
                     </div>
@@ -21,7 +23,7 @@
                         {% csrf_token %}
 
                         {{ form|crispy }}
-                        <button type="submit" class="btn btn-primary mybtn">Salvar</button>
+                        <button type="submit" class="btn btn-primary mybtn">Cadastrar</button>
                         <a href="{% url 'lista' %}" class="btn btn-success mybtn mymodalbutton2">Voltar</a>
                     </form>
                     </div>

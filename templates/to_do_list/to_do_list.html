@@ -8,7 +8,9 @@
 
 {% include 'mensagens.html' %}
 
-<center><h2>Carford Car Shop</h2></center><br>
+{% include 'navbar.html' %}
+
+<center><h2></h2></center><br>
 
 <center><table class="table-bordered my_table" id="alter">
     <thead class="mythead">
@@ -32,8 +34,7 @@
 </table></center>
 <br>
 
-<center><a href="{% url 'novo_carro' %}" class="btn btn-primary mx-3">Novo Carro</a>
-<a href="{% url 'proprietarios_list' %}" class="btn btn-success mx-3">Lista de Proprietários</a></center><br>
+<center><a href="{% url 'novo_carro' %}" class="btn btn-primary mybtn mx-3">Novo Carro</a></center><br>
 
 <ul class="pagination justify-content-center">
     {% if page_obj.has_previous %}

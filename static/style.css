@@ -1,13 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,300&display=swap');
 
-@media (min-width: 768px){ /* para deixar o site responsivo */
+@media (max-width: 1080px){ /* para deixar o site responsivo */
     body{max-width: 100%;};
 }
 
 body{ /* o corpo do site */
     position: relative;
     min-height: 100vh;
+    background-image: url('/static/imagens/cropped-1920-1080-796747.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:cover;
     background-color: #36eeb0;
+}
+
+h2{
+    color:#000000;
+}
+
+h5{
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    letter-spacing: 1px;
 }
 
 .table-bordered{ /* para botar borda no head do login */
@@ -80,6 +94,38 @@ body{ /* o corpo do site */
 .mybtn:active{ /* botões */
     transform:translateY(5px) translateX(5px);
     box-shadow: #094c66 5px 5px 5px;
+}
+
+.mybtn:hover{ /*botões dinamicos*/
+    border-radius: 15px;
+    transition: .5s;
+    overflow: hidden;
+}
+
+.mynav{ /* para o nav */
+    border-radius: 10px;
+    border: 10px double #000000;
+    box-shadow: 0 8px 32px 0 #0000005e;
+    background: #00000033;
+    backdrop-filter: blur( 13px );
+    -webkit-backdrop-filter: blur( 7.5px );
+}
+  
+.mydrop{ /* para o dropdown */
+    background: #9b9b9b;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.home{ /* icon casa no dropdown*/
+    position: absolute;
+      top: 1rem;
+      left: 3px;
+}
+
+.user2{ /* icon user na registro */
+      position: absolute;
+      top: 3rem;
+      left: 4px;
 }
 
 .mycardheader{ /* para deixar os itens no card-header na cor definida */
