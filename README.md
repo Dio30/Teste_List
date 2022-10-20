@@ -8,6 +8,6 @@
 
 ## Tambem foi feito com pedido que o veiculo cadstrado só teria 3 cores entre "yellow", "blue" ou "gray" e os modelos "hatch", "sedan" ou "convertible", os carros só poderão ser cadastrados se tiver um proprietário para poder escolher.
 
-## Como solicitado foram escritos testes unitarios
+## Como solicitado foram escritos testes unitarios, no app list foram escritos testes para o model testando se a criação do model estava funcionando corretamente, forms testando se o formulario inserido era valido e views para testar se a conexao HTTP estava ok e se o status_code estava em 200 e tambem foi testado se o template inserido no views.py estava correto, no app proprietários foram feitos testes no model tambem para testar se a criação do model estava funcionando corretamente e no views tambem para testar se a conexao HTTP estava ok e se o status_code estava em 200 e tambem foi testado se o template inserido no views.py estava correto.
 
 ## O projeto não foi feito em docker pois ainda não sei como funciona mas se me derem a oportunidade em um futuro projeto na empresa farei de tudo para aprender como funciona o docker e farei o possivel para que o projeto seja um sucesso.
