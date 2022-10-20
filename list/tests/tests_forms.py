@@ -1,5 +1,5 @@
 from django.test import TestCase
-from ..models import Proprietarios
+from proprietarios.models import Proprietarios
 from ..forms import CarrosForm
 
 class CarrosFormTest(TestCase):

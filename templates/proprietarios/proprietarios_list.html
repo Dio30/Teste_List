@@ -22,13 +22,13 @@
         <tr>
             {% for dono in object_list %}
                 <td>{{ dono.nome }}</td>
-                {% if dono.possivel_venda == True %}
+                {% if dono.possivel_venda is True %}
                 <td><img src="/static/confirm.png" width="40px" height="40px"></td>
                 {% else %}
                 <td><img src="/static/signal.png" width="30px" height="30px"></td>
                 {% endif %}
 
-                {% if dono.nome == 'admin' %}
+                {% if dono.id is True %}
                 <td>Sim</td>
                 {% else %}
                 <td>Não</td>

@@ -56,6 +56,7 @@ INSTALLED_APPS = [
     
     #meus apps
     'list',
+    'proprietarios',
 ]
 
 MIDDLEWARE = [
